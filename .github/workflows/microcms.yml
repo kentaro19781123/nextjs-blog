@@ -29,7 +29,7 @@ jobs:
     - name: add env.production
       run: |
         touch .env.production
-        echo "${{ secrets.SECRET_MICRO_API }}" >> .env.production
+        echo "API_KEY=${{ secrets.SECRET_MICRO_API }}" >> .env.production
 
     - name: build export
       run: yarn build
