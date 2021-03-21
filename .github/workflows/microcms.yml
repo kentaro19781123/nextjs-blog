@@ -26,7 +26,7 @@ jobs:
     - name: install
       run: yarn install --frozen-lockfile
 
-    - name: add .env.production
+    - name: add env.production
       run: |
         touch .env.production
         echo "API_KEY=${{ secrets.SECRET_MICRO_API }}" >> .env
