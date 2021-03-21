@@ -26,11 +26,8 @@ jobs:
     - name: install
       run: yarn install --frozen-lockfile
 
-    - name: build
+    - name: build export
       run: yarn build
-
-    - name: export
-      run: yarn export
 
     - name: add nojekyll
       run: touch ./out/.nojekyll
