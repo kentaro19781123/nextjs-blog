@@ -27,9 +27,9 @@ jobs:
       run: yarn install --frozen-lockfile
 
     - name: build export
-      env:
-        API_KEY: ${{secrets.micro}}
       run: yarn build
+      env:
+        API_KEY: ${{secrets.MICRO}}
 
     - name: add nojekyll
       run: touch ./out/.nojekyll
