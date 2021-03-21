@@ -3,6 +3,8 @@ name: microcms
 on:
   repository_dispatch:
     types: [updata]
+env:
+  API_KEY: ${{secrets.MICRO}}
 
 jobs:
   build-deploy:
@@ -28,8 +30,6 @@ jobs:
 
     - name: build export
       run: yarn build
-      env:
-        API_KEY: ${{secrets.MICRO}}
 
     - name: add nojekyll
       run: touch ./out/.nojekyll
