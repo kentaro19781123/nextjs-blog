@@ -6,6 +6,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
 // import CONTENTFULAPI from '../components/contentful_api'
+// import MICROAPI from './micro_api'
 
 export default function Home({ allPostsData }) {
   return (
@@ -40,7 +41,8 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
       {/* <CONTENTFULAPI /> */}
-
+      {/* <MICROAPI /> */}
+      <Link href="/micro_api"><a>micro_api→</a></Link>
     </Layout>
   )
 }
