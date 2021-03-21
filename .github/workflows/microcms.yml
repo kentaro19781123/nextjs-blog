@@ -3,8 +3,6 @@ name: microcms
 on:
   repository_dispatch:
     types: [updata]
-env:
-  API_KEY: ${{secrets.SECRET_MICRO_API}}
 
 jobs:
   build-deploy:
@@ -29,7 +27,9 @@ jobs:
       run: yarn install --frozen-lockfile
 
     - name: build export
-      run: yarn build
+      with:
+        API_KEY: ${{secrets.SECRET_MICRO_API}}
+        run: yarn build
 
     - name: add nojekyll
       run: touch ./out/.nojekyll
