@@ -4,9 +4,9 @@ export default function micro({ news }) {
   return (
     <div>
       <ul>
-        {news.map(news => (
-          <li key={news.id}>
-            {news.title}
+        {news.map(item => (
+          <li key={item.id}>
+            {item.title}
           </li>
         ))}
       </ul>
