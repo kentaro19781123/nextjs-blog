@@ -5,7 +5,7 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
-import CONTENTFULAPI from '../components/contentful_api'
+// import CONTENTFULAPI from '../components/contentful_api'
 
 export default function Home({ allPostsData }) {
   return (
@@ -39,7 +39,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <CONTENTFULAPI />
+      {/* <CONTENTFULAPI /> */}
 
     </Layout>
   )
