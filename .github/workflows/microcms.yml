@@ -26,10 +26,13 @@ jobs:
     - name: install
       run: yarn install --frozen-lockfile
 
+    - name: add .env.production
+      run: |
+        touch .env.production
+        echo "API_KEY=${{ secrets.SECRET_MICRO_API }}" >> .env
+
     - name: build export
       run: yarn build
-      env:
-        API_KEY: ${{secrets.MICRO}}
 
     - name: add nojekyll
       run: touch ./out/.nojekyll
