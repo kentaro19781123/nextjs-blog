@@ -2,7 +2,7 @@ name: microcms
 
 on:
   repository_dispatch:
-    types: [update]
+    types: [updata]
 
 jobs:
   build-deploy:
